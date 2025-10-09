@@ -119,6 +119,7 @@ def Corr_properties_WTS(input_directory,input_d_2,path_result):
     summary_corr=summary_corr.dropna()
     summary_corr['mean']=(summary_corr['Calibration']+summary_corr['Validation'])/2
     summary_corr = summary_corr.sort_values(by='mean')
+    plt.figure(figsize=(10, 6))
     plt.bar(summary_corr['Properties'],summary_corr['Calibration'], color='blue')
     plt.title('Correlation for Calibration period')
     plt.xticks(rotation=90,fontsize=8)
@@ -128,6 +129,7 @@ def Corr_properties_WTS(input_directory,input_d_2,path_result):
         plt.axvline(x=i - 0.5, color='gray', linestyle='--', alpha=0.6)  # Adjust x for better alignment
     plt.savefig(path_result+'Summary_Correlation_through_prop_WTS_calib.jpeg', dpi=300, bbox_inches='tight')
     plt.close()
+    plt.figure(figsize=(10, 6))
     plt.bar(summary_corr['Properties'],summary_corr['Validation'], color='red')
     plt.title('Correlation for Evaluation period')
     plt.xticks(rotation=90,fontsize=8)

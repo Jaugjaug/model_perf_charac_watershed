@@ -8,7 +8,6 @@ import numpy as np
 import scipy
 
 def Association_Phenom_BV_Knoben_HPD(input_directory,path_result):
-  
     content_distance = pd.read_csv(input_directory+"Distance_Knoben_HPD.csv",delimiter=";")
     content_eco_HPD = pd.read_csv(input_directory+"Compa_Eco_HPD.csv",delimiter=";")
     content_eco_knob = pd.read_csv(input_directory+"Compa_Eco_Knobentopo.csv",delimiter=";")
@@ -66,16 +65,16 @@ def Density_plot_distance(input_directory,path_result):
     
     BD_width = 0.01
     sns.set_style('whitegrid')
-    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], bw_method=BD_width, color='r', shade=True, label='LVL3').legend(loc="upper right")
-    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], bw_method=BD_width, color='b', shade=True, label='LVL2').legend(loc="upper right")
+    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], bw_method=BD_width, color='r', shade=True, label='LVL III').legend(loc="upper right")
+    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], bw_method=BD_width, color='b', shade=True, label='LVL II').legend(loc="upper right")
     plt.xlabel('Distance (m)')
     #plt.gcf().set_size_inches(16, 13)
     plt.savefig(path_result + "Histogram_distance_BW="+str(BD_width)+".tiff")
     plt.close()
     
     sns.set_style('whitegrid')
-    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], cumulative=True, bw_method=BD_width, color='r', shade=True, label='LVL3').legend(loc="upper right")
-    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], cumulative=True, bw_method=BD_width, color='b', shade=True, label='LVL2').legend(loc="upper right")
+    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], cumulative=True, bw_method=BD_width, color='r', shade=True, label='LVL III').legend(loc="upper right")
+    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], cumulative=True, bw_method=BD_width, color='b', shade=True, label='LVL II').legend(loc="upper right")
     plt.xlabel('Distance (m)')
     #plt.gcf().set_size_inches(16, 13)
     plt.savefig(path_result + "Histogram_distance_BW="+str(BD_width)+"_cumul.tiff")
@@ -83,16 +82,16 @@ def Density_plot_distance(input_directory,path_result):
     
     BD_width = 0.1
     sns.set_style('whitegrid')
-    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], bw_method=BD_width, color='r', shade=True, label='LVL3').legend(loc="upper right")
-    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], bw_method=BD_width, color='b', shade=True, label='LVL2').legend(loc="upper right")
+    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], bw_method=BD_width, color='r', shade=True, label='LVL III').legend(loc="upper right")
+    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], bw_method=BD_width, color='b', shade=True, label='LVL II').legend(loc="upper right")
     plt.xlabel('Distance (m)')
     #plt.gcf().set_size_inches(16, 13)
     plt.savefig(path_result + "Histogram_distance_BW="+str(BD_width)+".tiff")
     plt.close()
     
     sns.set_style('whitegrid')
-    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], cumulative=True, bw_method=BD_width, color='r', shade=True, label='LVL3').legend(loc="upper right")
-    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], cumulative=True, bw_method=BD_width, color='b', shade=True, label='LVL2').legend(loc="upper right")
+    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], cumulative=True, bw_method=BD_width, color='r', shade=True, label='LVL III').legend(loc="upper right")
+    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], cumulative=True, bw_method=BD_width, color='b', shade=True, label='LVL II').legend(loc="upper right")
     plt.xlabel('Distance (m)')
     #plt.gcf().set_size_inches(16, 13)
     plt.savefig(path_result + "Histogram_distance_BW="+str(BD_width)+"_cumul.tiff")
@@ -100,8 +99,8 @@ def Density_plot_distance(input_directory,path_result):
     
     BD_width = 0.5
     sns.set_style('whitegrid')
-    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], bw_method=BD_width, color='r', shade=True, label='LVL3').legend(loc="upper right")
-    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], bw_method=BD_width, color='b', shade=True, label='LVL2').legend(loc="upper right")
+    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], bw_method=BD_width, color='r', shade=True, label='LVL III').legend(loc="upper right")
+    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], bw_method=BD_width, color='b', shade=True, label='LVL II').legend(loc="upper right")
     plt.xlabel('Distance (m)')
     #plt.gcf().set_size_inches(16, 13)
     plt.savefig(path_result + "Histogram_distance_BW="+str(BD_width)+".tiff")
@@ -168,7 +167,7 @@ def Synthesis_Combination_watershed_HPD_Knoben(distance,input_directory,path_res
                     'BV_Knoben': BV,
                     'BV_HPD': bv_init3+1,
                     'Store_Phenom': content_eco_HPD['store_id_list'][bv_init3],
-                    'Flux_Phenom': content_eco_HPD['flux_id_list'][bv_init3]
+                    'Flux_Phenom': content_eco_HPD['flux_id_list'][bv_init3],
                 })
         if containt_lvl2_exc and len(init3)!=0:
             df.loc[df['Watershed']==BV,'LVL2']=0        
@@ -179,7 +178,7 @@ def Synthesis_Combination_watershed_HPD_Knoben(distance,input_directory,path_res
                     'BV_Knoben': BV,
                     'BV_HPD': bv_init2+1,
                     'Store_Phenom': content_eco_HPD['store_id_list'][bv_init2],
-                    'Flux_Phenom': content_eco_HPD['flux_id_list'][bv_init2]
+                    'Flux_Phenom': content_eco_HPD['flux_id_list'][bv_init2],
                 })
     df['Amount_HPD_Watershed']=df['LVL3']+df['LVL2']
     recap_phenom=pd.DataFrame(recap_phenom)

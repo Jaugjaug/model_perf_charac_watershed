@@ -6,6 +6,7 @@ Created on Tue Jul 29 13:00:19 2025
 """
 
 import os 
+import check_folder
 
 #Parameters
 distance=450562 #meters (distance between a watershed forom HPD what is only at the same ecoregion lvl2 than a watershed of CAMELS/Knoben)
@@ -27,6 +28,7 @@ Phase_one.Distance_between_watersheds(input_d,result_d)
 #2 - Based on the threshold determined by the user, on the distance between 2 watershed that belong on the same ecoregion level2, and by considering all the watershed that belong on the same ecoregion level3, the processes identified on the watersheds from the article of McMillan et al. (2022) are spread to their associated watersheds from Knoben et al. (2020).
 check_folder.Check_Phase_two()
 import Phase_two
+input_d = os.path.dirname(os.getcwd())+'/Input/'
 result_d = os.path.dirname(os.getcwd())+'/Result/Phase_two/Synthesis'
 Phase_two.Synthesis_Combination_watershed_HPD_Knoben(distance,input_d,result_d)
 result_d = os.path.dirname(os.getcwd())+'/Result/Phase_two/Association'
@@ -40,9 +42,9 @@ check_folder.Check_Phase_three()
 import Phase_three
 result_d = os.path.dirname(os.getcwd())+'/Result/Phase_three/Tree_creat/'
 input_d = os.path.dirname(os.getcwd())+'/Input/'
-Phase_three.Tree_creation(input_d,result_d,'model') #For models
-input_d = os.path.dirname(os.getcwd())+'/Result/Phase_two/Synthesis/'
-Phase_three.Tree_creation(input_d,result_d,'WTS') #For watershed
+Phase_three.Tree_creation(input_d,input_d,result_d,'model') #For models
+input_d2 = os.path.dirname(os.getcwd())+'/Result/Phase_two/Synthesis/'
+Phase_three.Tree_creation(input_d,input_d2,result_d,'WTS') #For watershed
 result_d = os.path.dirname(os.getcwd())+'/Result/Phase_three/Tree_compa/'
 input_d = os.path.dirname(os.getcwd())+'/Input/'
 input_d_3 = os.path.dirname(os.getcwd())+'/Result/Phase_three/Tree_creat/'

@@ -115,13 +115,17 @@ def Perf_comparison(input_directory,input_d_2,path_result,limit_KGE):
                 list_corr_bil_simind_ratparam.append(r)
     
                 #Bilinear regression with variable transformee     
-                ratio_param_modifie=np.mean(data_simindex['sim_index'][row_index])+np.std(data_simindex['sim_index'][row_index], ddof=1)/np.std(data_simindex['ratio_nb_param'][row_index], ddof=1)*(data_simindex['ratio_nb_param'][row_index]-np.mean(data_simindex['ratio_nb_param'][row_index]))
-                X = np.column_stack((data_simindex['sim_index'][row_index], ratio_param_modifie, data_simindex['sim_index'][row_index] * ratio_param_modifie)) # Features: x, y, and x*y interaction term
+                #ratio_param_modifie=np.mean(data_simindex['sim_index'][row_index])+np.std(data_simindex['sim_index'][row_index], ddof=1)/np.std(data_simindex['ratio_nb_param'][row_index], ddof=1)*(data_simindex['ratio_nb_param'][row_index]-np.mean(data_simindex['ratio_nb_param'][row_index]))
+                #X = np.column_stack((data_simindex['sim_index'][row_index], ratio_param_modifie, data_simindex['sim_index'][row_index] * ratio_param_modifie)) # Features: x, y, and x*y interaction term
+                sim_index_mod=(data_simindex['sim_index'][row_index]-np.std(data_simindex['sim_index'][row_index]))/np.mean(data_simindex['sim_index'][row_index])
+                nb_param_mod=(data_simindex['Nb_param_mod'][row_index]-np.std(data_simindex['Nb_param_mod'][row_index]))/np.mean(data_simindex['Nb_param_mod'][row_index])
+                X = np.column_stack((sim_index_mod, nb_param_mod)) # Features: x and y
                 model = LinearRegression()
-                model.fit(X, data_simindex[line_period][row_index]) # Fit model to features and target
-                bilin_coef_a.append(model.coef_[0])
-                bilin_coef_b.append(model.coef_[1])
-                bilin_coef_c.append(model.coef_[2])
+                if (np.count_nonzero(sim_index_mod == 0)!=len(sim_index_mod))&(np.isnan(sim_index_mod).sum()!=len(sim_index_mod)):
+                    model.fit(X, data_simindex[line_period][row_index]) # Fit model to features and target
+                    bilin_coef_a.append(model.coef_[0])
+                    bilin_coef_b.append(model.coef_[1])
+                    #bilin_coef_c.append(model.coef_[2])
         list_corr=sorted(list_corr, key=lambda x: (not math.isnan(x), x))
         Value_correlation[line_period]=list_corr
         plt.scatter([range(len(list_corr))],list_corr)
@@ -145,24 +149,24 @@ def Perf_comparison(input_directory,input_d_2,path_result,limit_KGE):
         slope, intercept = np.polyfit(bilin_coef_a, bilin_coef_b, 1)
         plt.scatter(bilin_coef_a,bilin_coef_b)
         plt.xlabel("Coef a (sim_index)")
-        plt.ylabel("Coef b (ratio_nb_param)")
-        plt.title("Coef Bilinear relation with sim. index and parameter, slope = "+str(round(slope,2)))  # Set the title
-        plt.savefig(path_result+'Coef_bilin_a_and_b_model_per_wts'+'_'+line_period+'_'+'.jpeg', dpi=300, bbox_inches='tight')
+        plt.ylabel("Coef b (nb_param)")
+        plt.title("Coef Bilinear relation with sim. index and parameter, slope = "+str(round(slope,3)))  # Set the title
+        plt.savefig(path_result+'Coef_bilin_a_and_b_model_per_wts'+'_'+line_period+'.jpeg', dpi=300, bbox_inches='tight')
         plt.close()
-        slope, intercept = np.polyfit(bilin_coef_a, bilin_coef_c, 1)
-        plt.scatter(bilin_coef_a,bilin_coef_c)
-        plt.xlabel("Coef a (sim_index)")
-        plt.ylabel("Coef c (interaction sim_index/ratio_nb_param)")
-        plt.title("Coef Bilinear relation with sim. index and parameter, slope = "+str(round(slope,2)))  # Set the title
-        plt.savefig(path_result+'Coef_bilin_a_and_c_model_per_wts'+'_'+line_period+'_'+'.jpeg', dpi=300, bbox_inches='tight')
-        plt.close()
-        slope, intercept = np.polyfit(bilin_coef_c, bilin_coef_b, 1)
-        plt.scatter(bilin_coef_c,bilin_coef_b)
-        plt.xlabel("Coef c (interaction sim_index/ratio_nb_param)")
-        plt.ylabel("Coef b (ratio_nb_param)")
-        plt.title("Coef Bilinear relation with sim. index and parameter, slope = "+str(round(slope,2)))  # Set the title
-        plt.savefig(path_result+'Coef_bilin_b_and_c_model_per_wts'+'_'+line_period+'_'+'.jpeg', dpi=300, bbox_inches='tight')
-        plt.close()
+        #slope, intercept = np.polyfit(bilin_coef_a, bilin_coef_c, 1)
+        #plt.scatter(bilin_coef_a,bilin_coef_c)
+        #plt.xlabel("Coef a (sim_index)")
+        #plt.ylabel("Coef c (interaction sim_index/ratio_nb_param)")
+        #plt.title("Coef Bilinear relation with sim. index and parameter, slope = "+str(round(slope,3)))  # Set the title
+        #plt.savefig(path_result+'Coef_bilin_a_and_c_model_per_wts'+'_'+line_period+'_'+'.jpeg', dpi=300, bbox_inches='tight')
+        #plt.close()
+        #slope, intercept = np.polyfit(bilin_coef_c, bilin_coef_b, 1)
+        #plt.scatter(bilin_coef_c,bilin_coef_b)
+        #plt.xlabel("Coef c (interaction sim_index/ratio_nb_param)")
+        #plt.ylabel("Coef b (ratio_nb_param)")
+        #plt.title("Coef Bilinear relation with sim. index and parameter, slope = "+str(round(slope,3)))  # Set the title
+        #plt.savefig(path_result+'Coef_bilin_b_and_c_model_per_wts'+'_'+line_period+'_'+'.jpeg', dpi=300, bbox_inches='tight')
+        #plt.close()
     
     data_coord_perf.to_csv(path_result+'Corr_coordinate_WTS.csv', index=False, sep=";")
     
@@ -172,11 +176,11 @@ def Perf_comparison(input_directory,input_d_2,path_result,limit_KGE):
         filtered_Value_correlation = Value_correlation[condition]
         num_rows = filtered_Value_correlation.shape[0]
         print("amount watershed with corr. > 0.7: "+str(num_rows))
-        condition = (Value_correlation[line_period].abs() <= 0.7) & (Value_correlation[line_period].abs() > 0.3)
+        condition = (Value_correlation[line_period].abs() <= 0.7) & (Value_correlation[line_period].abs() > 0.4)
         filtered_Value_correlation = Value_correlation[condition]
         num_rows = filtered_Value_correlation.shape[0]
-        print("amount watershed with corr. <= 0.7 and > 0.3: "+str(num_rows))
-        condition = Value_correlation[line_period].abs() <= 0.3 
+        print("amount watershed with corr. <= 0.7 and > 0.4: "+str(num_rows))
+        condition = Value_correlation[line_period].abs() <= 0.4 
         filtered_Value_correlation = Value_correlation[condition]
         num_rows = filtered_Value_correlation.shape[0]
-        print("amount watershed with corr. <= 0.3: "+str(num_rows))
+        print("amount watershed with corr. <= 0.4: "+str(num_rows))
