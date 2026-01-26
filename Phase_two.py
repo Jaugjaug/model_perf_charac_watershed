@@ -8,6 +8,9 @@ import numpy as np
 import scipy
 
 def Association_Phenom_BV_Knoben_HPD(input_directory,path_result):
+###Program that summarizes every combination same ecoregion levelIII and levelII between 
+###Knoben's WTS and HPD's WTS
+
     content_distance = pd.read_csv(input_directory+"Distance_Knoben_HPD.csv",delimiter=";")
     content_eco_HPD = pd.read_csv(input_directory+"Compa_Eco_HPD.csv",delimiter=";")
     content_eco_knob = pd.read_csv(input_directory+"Compa_Eco_Knobentopo.csv",delimiter=";")
@@ -21,7 +24,7 @@ def Association_Phenom_BV_Knoben_HPD(input_directory,path_result):
     
     index_row=0
     for index_k, row_k in BV_knob.iterrows():
-        print(index_k)
+        print("Progress: P2 - Association_Phenom_BV_Knoben_HPD: "+str(round(100*index_k/len(BV_knob),2)),"%")
         tempo_HPD = content_eco_HPD[content_eco_HPD['NA_L2CODE']==BV_knob['NA_L2CODE'][index_k]]
         if len(tempo_HPD)!=0:
             for j, row_hpd in enumerate(tempo_HPD.iterrows()):
@@ -56,6 +59,7 @@ def Association_Phenom_BV_Knoben_HPD(input_directory,path_result):
         
     resultat.to_csv(path_result+'/Association_Dom_Phen_BV_Knoben.txt', sep=';', index=False)
 
+
 def Density_plot_distance(input_directory,path_result):
     content_distance = pd.read_csv(input_directory+"Association_Dom_Phen_BV_Knoben.txt",delimiter=";")  ##Ne contient que les BV de HPD et Knoben partageant les memes ecoregions lvl2 ou lvl3
     
@@ -63,65 +67,38 @@ def Density_plot_distance(input_directory,path_result):
     contentlvl3 = content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance']
     contentlvl2 = content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance']
     
-    BD_width = 0.01
-    sns.set_style('whitegrid')
-    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], bw_method=BD_width, color='r', shade=True, label='LVL III').legend(loc="upper right")
-    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], bw_method=BD_width, color='b', shade=True, label='LVL II').legend(loc="upper right")
-    plt.xlabel('Distance (m)')
-    #plt.gcf().set_size_inches(16, 13)
-    plt.savefig(path_result + "Histogram_distance_BW="+str(BD_width)+".tiff")
-    plt.close()
-    
-    sns.set_style('whitegrid')
-    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], cumulative=True, bw_method=BD_width, color='r', shade=True, label='LVL III').legend(loc="upper right")
-    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], cumulative=True, bw_method=BD_width, color='b', shade=True, label='LVL II').legend(loc="upper right")
-    plt.xlabel('Distance (m)')
-    #plt.gcf().set_size_inches(16, 13)
-    plt.savefig(path_result + "Histogram_distance_BW="+str(BD_width)+"_cumul.tiff")
-    plt.close()
-    
-    BD_width = 0.1
-    sns.set_style('whitegrid')
-    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], bw_method=BD_width, color='r', shade=True, label='LVL III').legend(loc="upper right")
-    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], bw_method=BD_width, color='b', shade=True, label='LVL II').legend(loc="upper right")
-    plt.xlabel('Distance (m)')
-    #plt.gcf().set_size_inches(16, 13)
-    plt.savefig(path_result + "Histogram_distance_BW="+str(BD_width)+".tiff")
-    plt.close()
-    
-    sns.set_style('whitegrid')
-    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], cumulative=True, bw_method=BD_width, color='r', shade=True, label='LVL III').legend(loc="upper right")
-    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], cumulative=True, bw_method=BD_width, color='b', shade=True, label='LVL II').legend(loc="upper right")
-    plt.xlabel('Distance (m)')
-    #plt.gcf().set_size_inches(16, 13)
-    plt.savefig(path_result + "Histogram_distance_BW="+str(BD_width)+"_cumul.tiff")
-    plt.close()
-    
-    BD_width = 0.5
-    sns.set_style('whitegrid')
-    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], bw_method=BD_width, color='r', shade=True, label='LVL III').legend(loc="upper right")
-    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], bw_method=BD_width, color='b', shade=True, label='LVL II').legend(loc="upper right")
-    plt.xlabel('Distance (m)')
-    #plt.gcf().set_size_inches(16, 13)
-    plt.savefig(path_result + "Histogram_distance_BW="+str(BD_width)+".tiff")
-    plt.close()
-    
-    sns.set_style('whitegrid')
-    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], cumulative=True, bw_method=BD_width, color='r', shade=True, label='LVL3').legend(loc="upper right")
-    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], cumulative=True, bw_method=BD_width, color='b', shade=True, label='LVL2').legend(loc="upper right")
-    plt.xlabel('Distance (m)')
-    #plt.gcf().set_size_inches(16, 13)
-    plt.savefig(path_result + "Histogram_distance_BW="+str(BD_width)+"_cumul.tiff")
-    plt.close()
+    bd_width_list=[0.01,0.1,0.5]
+    for BD_width in bd_width_list:
+        histogram_plot(BD_width,content_distance,path_result)
     
     list_perc=[0.8,0.9,0.95,0.99]
     g = open(path_result+'Summary_Stat_Histogram.txt','w')
     for i in list_perc:
-        dist=np.quantile(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'],i)
-        g.write("For the percentile (%):"+str(i*100)+", the distance between watersheds in HPD and Knoben datasets in the same lvl3 ecoregion is: "+str(round(dist)/1000)+"km"+"\n")
+        dist_eco3=np.quantile(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'],i)
+        g.write("For the percentile (%):"+str(i*100)+", the distance between watersheds in HPD and Knoben datasets in the same lvl3 ecoregion is: "+str(round(dist_eco3)/1000)+"km"+"\n")
+        mask = ((content_distance['Eco_lvl2_K'] == content_distance['Eco-lvl2_HPD']) & (content_distance['Distance'] < dist_eco3) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']))
+        perc_eco2 = 100 * mask.sum() / len(content_distance[(content_distance['Eco_lvl2_K'] == content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD'])])
+        g.write("For the percentile (%):"+str(i*100)+", the percentage of watershed lvlII (only) corresponding to the distance evaluated for lvl III is: "+str(round(perc_eco2,2))+"%"+"\n")
     g.close()
 
-def Synthesis_Combination_watershed_HPD_Knoben(distance,input_directory,path_result):
+def histogram_plot(bd_width,content_distance,path_result):
+    sns.set_style('whitegrid')
+    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], bw_method=bd_width, color='r', fill=True, label='LVL III').legend(loc="upper right")
+    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], bw_method=bd_width, color='b', fill=True, label='LVL II').legend(loc="upper right")
+    plt.xlabel('Distance (m)')
+    plt.savefig(path_result + "Histogram_distance_BW="+str(bd_width)+".tiff")
+    plt.close()
+    
+    sns.set_style('whitegrid')
+    sns.kdeplot(content_distance.loc[content_distance['Eco-lvl3_K']==content_distance['Eco-lvl3_HPD'],'Distance'], cumulative=True, bw_method=bd_width, color='r', fill=True, label='LVL3').legend(loc="upper right")
+    sns.kdeplot(content_distance.loc[(content_distance['Eco_lvl2_K']==content_distance['Eco-lvl2_HPD']) & (content_distance['Eco-lvl3_K']!=content_distance['Eco-lvl3_HPD']),'Distance'], cumulative=True, bw_method=bd_width, color='b', fill=True, label='LVL2').legend(loc="upper right")
+    plt.xlabel('Distance (m)')
+    #plt.gcf().set_size_inches(16, 13)
+    plt.savefig(path_result + "Histogram_distance_BW="+str(bd_width)+"_cumul.tiff")
+    plt.close()
+
+
+def Synthesis_Combination_watershed_HPD_Knoben(include_LVL2,distance,containt_lvl2_exc,input_directory,path_result):
     ##Data
     content_distance_polygon = pd.read_csv(input_directory+"Ecoregionslvl3_HPD_Knoben_distance_polygon.csv",delimiter=";",decimal=",")
     content_HPD_polygon = pd.read_csv(input_directory+"Ecoregionslvl3_HPD_WSHD_properties.csv",delimiter=";",decimal=",")
@@ -136,15 +113,18 @@ def Synthesis_Combination_watershed_HPD_Knoben(distance,input_directory,path_res
     df = pd.DataFrame({'Watershed' : content_distance['gauge_id'].unique(), 'LVL3' : np.repeat(0, len(content_distance['gauge_id'].unique())), 'LVL2' : np.repeat(0, len(content_distance['gauge_id'].unique()))})
     recap_phenom=[]
     for line_pr, BV in enumerate(df['Watershed']):
-        print("Progress (%): ",str(line_pr/len(df)*100))
+        print("Progress: P2 - Synthesis_Combination_watershed_HPD_Knoben: "+str(round(line_pr/len(df)*100,2))+"%")
         ##BV HPD Appartient meme ecoregion lvl3 que Knoben?
         init3=[]
         ##BV HPD Appartient meme ecoregion lvl2 (hors lvl3) que Knoben, et inferieur distance?
         init2=[]
         for line,i in enumerate(content_distance['gauge_id']):
             contraint_BV = i == BV
-    
-            contrainte_LVL2 = content_distance['NA_L2CODE'][line]==content_eco_HPD['NA_L2CODE'][content_distance['NEAR_FID'][line]-1]
+            
+            if include_LVL2:
+                contrainte_LVL2 = content_distance['NA_L2CODE'][line]==content_eco_HPD['NA_L2CODE'][content_distance['NEAR_FID'][line]-1]
+            else:
+                contrainte_LVL2 = False
             contrainte_LVL3 = content_distance['NA_L3CODE'][line]==content_eco_HPD['NA_L3CODE'][content_distance['NEAR_FID'][line]-1]
     
             contrainte_unicity2 = (content_distance['NEAR_FID'][line]-1) in init2    
@@ -168,6 +148,7 @@ def Synthesis_Combination_watershed_HPD_Knoben(distance,input_directory,path_res
                     'BV_HPD': bv_init3+1,
                     'Store_Phenom': content_eco_HPD['store_id_list'][bv_init3],
                     'Flux_Phenom': content_eco_HPD['flux_id_list'][bv_init3],
+                    'Ecoregion_commun': 'LIII'
                 })
         if containt_lvl2_exc and len(init3)!=0:
             df.loc[df['Watershed']==BV,'LVL2']=0        
@@ -179,6 +160,7 @@ def Synthesis_Combination_watershed_HPD_Knoben(distance,input_directory,path_res
                     'BV_HPD': bv_init2+1,
                     'Store_Phenom': content_eco_HPD['store_id_list'][bv_init2],
                     'Flux_Phenom': content_eco_HPD['flux_id_list'][bv_init2],
+                    'Ecoregion_commun': 'LII'
                 })
     df['Amount_HPD_Watershed']=df['LVL3']+df['LVL2']
     recap_phenom=pd.DataFrame(recap_phenom)
@@ -228,3 +210,13 @@ def Synthesis_Combination_watershed_HPD_Knoben(distance,input_directory,path_res
     ax2.set_xlim(- 2.5 * width, 2.5 * width)
     
     fig.savefig(path_result+'/to_store.jpeg', bbox_inches='tight')
+    
+    eco_by_wts = recap_phenom.groupby('BV_Knoben')['Ecoregion_commun'].apply(set)
+    count_LIII_only = eco_by_wts.apply(lambda x: x == {'LIII'}).sum()
+    count_LII_only  = eco_by_wts.apply(lambda x: x == {'LII'}).sum()
+    count_both      = eco_by_wts.apply(lambda x: x == {'LIII', 'LII'}).sum()
+    summary_stat = pd.DataFrame({
+        'Condition': ['LIII_only', 'LII_only', 'LIII_and_LII'],
+        'Nb_unique_ID_BV_Knoben': [count_LIII_only,count_LII_only,count_both]
+        })
+    summary_stat.to_csv(path_result+'/summary_stat.txt', sep=';', index=False)

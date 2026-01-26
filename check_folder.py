@@ -47,7 +47,9 @@ def check_mod():
         import pathlib
         print("module 'pathlib' is installed")
     except ModuleNotFoundError:
-        print("module 'pathlib' is not installed")  
+        print("module 'pathlib' is not installed") 
+
+        
         
 ##Check existence of all subfolder results and needed input files.
 #Global
@@ -87,10 +89,14 @@ def Check_Phase_three():
     if not os.path.isfile(path_input +"Caracteristic_Models.csv"):
         print("P3 - The file 'Caracteristic_Models.csv' is missing") 
     path_result=os.path.dirname(os.getcwd())+'/Result/'
-    if not os.path.isdir(path_result+'/Phase_three/Tree_creat'):
-        os.makedirs(path_result+'/Phase_three/Tree_creat')  
+    if not os.path.isdir(path_result+'/Phase_three/Tree_creat/WTS'):
+        os.makedirs(path_result+'/Phase_three/Tree_creat/WTS')  
+    if not os.path.isdir(path_result+'/Phase_three/Tree_creat/model'):
+        os.makedirs(path_result+'/Phase_three/Tree_creat/model')        
     if not os.path.isdir(path_result+'/Phase_three/Tree_compa'):
         os.makedirs(path_result+'/Phase_three/Tree_compa')  
+    if not os.path.isdir(path_result+'/Phase_three/Tree_compa_graph'):
+        os.makedirs(path_result+'/Phase_three/Tree_compa_graph')  
 
 def Check_Phase_four():
     path_result=os.path.dirname(os.getcwd())+'/Result/'
@@ -98,11 +104,25 @@ def Check_Phase_four():
         os.makedirs(path_result+'/Phase_four/KGE_comparison')    
     if not os.path.isdir(path_result+'/Phase_four/KGE_comparison/Total'):
         os.makedirs(path_result+'/Phase_four/KGE_comparison/Total')   
+    if not os.path.isdir(path_result+'/Phase_four/KGE_comparison/Multilinear_reg_test'):
+        os.makedirs(path_result+'/Phase_four/KGE_comparison/Multilinear_reg_test')
+    if not os.path.isdir(path_result+'/Phase_four/KGE_comparison/Slope_test'):
+        os.makedirs(path_result+'/Phase_four/KGE_comparison/Slope_test') 
     if not os.path.isdir(path_result+'/Phase_four/KGE_comparison/Per_Model'):
         os.makedirs(path_result+'/Phase_four/KGE_comparison/Per_Model')   
     if not os.path.isdir(path_result+'/Phase_four/KGE_comparison/Per_WTS'):
-        os.makedirs(path_result+'/Phase_four/KGE_comparison/Per_WTS')   
-
+        os.makedirs(path_result+'/Phase_four/KGE_comparison/Per_WTS')
+    if not os.path.isdir(path_result+'/Phase_four/KGE_comparison/Per_WTS/general'):
+        os.makedirs(path_result+'/Phase_four/KGE_comparison/Per_WTS/general')
+    if not os.path.isdir(path_result+'/Phase_four/KGE_comparison/Per_WTS/test_wts_snow'):
+        os.makedirs(path_result+'/Phase_four/KGE_comparison/Per_WTS/test_wts_snow')
+    if not os.path.isdir(path_result+'/Phase_four/KGE_comparison/Per_WTS/test_wts_subsurf'):
+        os.makedirs(path_result+'/Phase_four/KGE_comparison/Per_WTS/test_wts_subsurf')
+    if not os.path.isdir(path_result+'/Phase_four/KGE_comparison/Per_WTS/test_wts_gwt'):
+        os.makedirs(path_result+'/Phase_four/KGE_comparison/Per_WTS/test_wts_gwt')
+    if not os.path.isdir(path_result+'/Phase_four/KGE_comparison/Per_WTS/WTS_nosnow_mod_nosnow'):
+        os.makedirs(path_result+'/Phase_four/KGE_comparison/Per_WTS/WTS_nosnow_mod_nosnow')
+        
 def Check_Phase_five():
     path_result=os.path.dirname(os.getcwd())+'/Result/'
     if not os.path.isdir(path_result+'/Phase_five/Corr_properties_WTS'):
