@@ -24,7 +24,7 @@ Prerequisites:
 	- Ecoregion (level 1, 2 and 3 for watershed from HPD database)
 	- Distance between each combination of watershed from Knoben's dataset and from HPD database
 	- Performance for each model on each watershed (Calibration and Evaluation periods)
-	- characteristics from CAMELS dataset
+	- Characteristics from CAMELS dataset
 
 License:
 MIT License
@@ -34,6 +34,7 @@ Julien Augas, SDSU
 Hllary McMillan, SDSU
 
 References:
+- Environmental Protection Agency. 2010. “Ecoregions of North America.” https://www.epa.gov/eco-research/ecoregions-north-america.
 - Knoben, W.J.M., Freer, J.E., Peel, M.C., Fowler, K.J.A., Woods, R.A., 2020. A Brief Analysis of Conceptual Model Structure Uncertainty Using 36 Models and 559 Catchments. Water Resources Research 56, e2019WR025975. https://doi.org/10.1029/2019WR025975
 - McMillan, H., 2022. A taxonomy of hydrological processes and watershed function. Hydrological Processes 36, e14537. https://doi.org/10.1002/hyp.14537
 
