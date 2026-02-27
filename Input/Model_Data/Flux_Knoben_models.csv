@@ -1,0 +1,74 @@
+Model_Knoben;Recurrence;Store_Phenom;Flux_Phenom
+m_01_collie1_1p_1s;1;nan;Surf.ET, Surf.Over.SE
+m_02_wetland_4p_1s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.Int.Thru, Surf.Over.SE
+m_03_collie2_4p_1s;1;nan;Surf.ET.Evap.Soil, Surf.ET, Sub.SSFlow, Surf.Over.SE
+m_04_newzealand1_6p_1s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET.Evap.Soil, Surf.ET.Transp, Sub.SSFlow, Surf.Over.SE
+m_05_ihacres_7p_1s;1;nan;Surf.ET, Surf.Over, Surf.Over.SE, Chan.Flow
+m_05_ihacres_7p_1s;2;nan;Chan.Flow
+m_06_alpine1_4p_2s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.Over.SE, Surf.Snow.Stor, Surf.Snow.Melt
+m_07_gr4j_4p_2s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET.Evap.Soil, Sub.Soil.Drain, Surf.Over.SE, Chan.Flow
+m_07_gr4j_4p_2s;2;nan;Sub.Soil.Drain, Chan.Flow
+m_08_us1_5p_2s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET.Evap.Soil, Surf.ET.Transp, Surf.ET.Evap.Soil, Surf.Int.Thru, Surf.Over.SE
+m_08_us1_5p_2s;2;nan;Surf.ET.Evap.Soil
+m_09_susannah1_6p_2s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain , Surf.ET.Evap.Soil, Surf.ET.Transp, Sub.SSFlow, Surf.Over.SE
+m_09_susannah1_6p_2s;2;Sub.GW.Store.Mult;Sub.GWSW.Gain
+m_10_susannah2_6p_2s;1;nan;Surf.ET, Sub.SSFlow, Sub.Soil.Macro.Unsat, Surf.Over.SE
+m_11_collie3_6p_2s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET.Evap.Soil, Surf.ET, Sub.SSFlow, Sub.Soil.Drain, Surf.Over.SE
+m_12_alpine2_6p_2s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Sub.SSFlow, Surf.Over.SE, Surf.Snow.Stor, Surf.Snow.Melt
+m_13_hillslope_7p_2s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Sub.Soil.Matrix.Capil, Surf.ET, Surf.Int.Thru, Sub.Soil.Drain, Surf.Over.SE, Chan.Flow
+m_14_topmodel_7p_2s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET.Evap.Soil, Sub.SSFlow, Surf.Over.SE
+m_14_topmodel_7p_2s;2;nan;Surf.Over.SE
+m_15_plateau_8p_2s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Sub.Soil.Matrix.Capil, Surf.ET.Evap.Soil, Surf.Inf.Inf, Surf.Int.Thru, Surf.Over.SE, Chan.Flow
+m_16_newzealand2_8p_2s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.ET.Evap.Soil, Surf.ET.Transp, Surf.Int.Thru, Sub.SSFlow, Surf.Over.SE, Chan.Flow
+m_17_penman_4p_3s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.Over, Surf.Over.SE
+m_17_penman_4p_3s;2;nan;Surf.ET, Surf.Over.SE
+m_18_simhyd_7p_3s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.ET.Transp, Surf.Inf.Inf, Surf.Int.Thru, Sub.SSFlow, Sub.Soil.Drain, Surf.Over.SE
+m_19_australia_8p_3s;1;nan;Surf.ET, Sub.SSFlow, Sub.Soil.Macro.Unsat, Sub.Soil.Drain, Surf.Over.SE
+m_20_gsfb_8p_3s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET.Transp, Sub.SSFlow, Sub.Soil.Drain, Surf.Over.SE
+m_20_gsfb_8p_3s;2;Sub.GW.Store.Mult;Sub.GWSW.Gain
+m_21_flexb_9p_3s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET.Evap.Soil, Surf.Over, Sub.Soil.Drain, Surf.Over.SE, Chan.Flow
+m_22_vic_10p_3s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.Int.Thru, Surf.Int.Int.Canopy, Sub.Soil.Drain, Surf.Over.SE
+m_22_vic_10p_3s;2;nan;Sub.GWSW.Gain, Surf.Int.Thru, Surf.Over.SE
+m_23_lascam_24p_3s;1;Sub.GW.Store.Mult, Surf.Over.SE.Satexp;Sub.GWSW.Gain, Surf.ET, Surf.Inf.Inf, Surf.Int.Thru, Sub.SSFlow.VSAsub, Sub.Soil.Drain, Surf.Over.SE
+m_23_lascam_24p_3s;2;nan;Surf.ET, Surf.Inf.Inf, Sub.GWSW.Gain, Sub.Soil.Drain, Surf.Over.SE
+m_24_mopex1_5p_4s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Sub.Soil.Drain, Surf.Over.SE
+m_25_tcm_6p_4s;1;Sub.GW.Store.Mult;Sub.GW.Loss.Bound, Sub.GWSW.Gain, Surf.ET, Sub.GW.BedInf.Macro, Surf.Over.SE
+m_25_tcm_6p_4s;2;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.Over.SE
+m_25_tcm_6p_4s;3;nan;Sub.GWSW.Gain
+m_26_flexi_10p_4s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.ET.Evap.Soil, Surf.Int.Thru, Surf.Over, Sub.Soil.Drain, Surf.Over.SE, Chan.Flow
+m_27_tank_12p_4s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Sub.SSFlow, Sub.Soil.Drain
+m_28_xinanjiang_12p_4s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Sub.SSFlow, Surf.Over, Surf.Over.SE
+m_28_xinanjiang_12p_4s;2;nan;Surf.Over.SE
+m_29_hymod_5p_5s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.Over, Surf.Over.SE
+m_30_mopex2_7p_5s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Sub.Soil.Drain, Surf.Over.SE, Surf.Snow.Stor, Surf.Snow.Melt
+m_31_mopex3_8p_5s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Sub.Soil.Drain, Surf.Over.SE, Surf.Snow.Stor, Surf.Snow.Melt
+m_32_mopex4_10p_5s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.Int.Thru, Sub.Soil.Drain, Surf.Over.SE, Surf.Snow.Stor, Surf.Snow.Melt
+m_33_sacramento_11p_5s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Sub.SSFlow, Sub.Soil.Drain, Surf.Over.SE, Sub.Soil.Matrix
+m_33_sacramento_11p_5s;2;nan;Surf.ET, Sub.Soil.Drain, Sub.Soil.Matrix
+m_34_flexis_12p_5s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.ET.Evap.Soil, Surf.Int.Thru, Surf.Over, Sub.Soil.Drain, Surf.Over.SE, Surf.Snow.Stor, Surf.Snow.Melt, Chan.Flow
+m_35_mopex5_12p_5s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.Int.Thru, Surf.ET.Transp, Sub.Soil.Drain, Surf.Over.SE, Surf.Snow.Stor, Surf.Snow.Melt
+m_36_modhydrolog_15p_5s;1;Sub.GW.Store.Mult, Surf.Water.Depr;Sub.GWSW.Gain, Surf.ET, Surf.ET.Transp, Sub.GW.Loss.Deep, Surf.Inf.Inf, Surf.Int.Thru, Sub.SSFlow, Sub.Soil.Drain, Surf.Over.SE
+m_36_modhydrolog_15p_5s;2;nan;Sub.GWSW.Gain, Surf.Inf.Inf
+m_37_hbv_15p_5s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Sub.Soil.Matrix.Capil, Surf.ET.Evap.Soil, Surf.Inf.Inf, Sub.SSFlow, Surf.Snow.Melt, Sub.Soil.Drain, Surf.Snow.Stor, Surf.Snow.Refrz, Chan.Flow
+m_37_hbv_15p_5s;2;nan;Sub.Soil.Drain, Surf.Snow.Melt
+m_38_tank2_16p_5s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Sub.Soil.Matrix.Capil, Surf.ET, Sub.Soil.Matrix, Sub.SSFlow, Sub.Soil.Drain
+m_39_mcrm_16p_5s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.Int.Thru, Sub.SSFlow, Sub.Soil.Drain, Surf.Over.SE, Chan.Flow
+m_39_mcrm_16p_5s;2;nan;Surf.ET, Sub.GWSW.Gain, Sub.Soil.Drain, Surf.Over.SE
+m_40_smar_8p_6s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.Inf.Inf, Sub.Soil.Drain, Surf.Over.SE, Chan.Flow
+m_40_smar_8p_6s;2;nan;Surf.ET, Sub.GWSW.Gain, Surf.Over.SE
+m_41_nam_10p_6s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Sub.SSFlow, Sub.Soil.Drain, Surf.Over.SE, Surf.Snow.Stor
+m_41_nam_10p_6s;2;nan;Surf.ET, Sub.SSFlow
+m_42_hycymodel_12p_6s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.ET.Evap.Soil, Surf.Int.Thru, Sub.SSFlow, Surf.Int.Int, Sub.Soil.Drain, Surf.Over.SE
+m_42_hycymodel_12p_6s;2;nan;Surf.ET
+m_43_gsmsocont_12p_6s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.Inf.Inf, Sub.SSFlow, Surf.Snow.Melt, Surf.Over.SE, Surf.Snow.Stor, Surf.Glac.Melt.Ice
+m_43_gsmsocont_12p_6s;2;nan;Sub.GWSW.Gain, Surf.Snow.Melt
+m_44_echo_16p_6s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.Inf.Inf, Surf.Int.Thru, Surf.Snow.Melt, Surf.Snow.Refrz, Sub.Soil.Drain, Surf.Over.SE, Surf.Snow.Stor
+m_44_echo_16p_6s;2;nan;Surf.ET, Surf.Inf.Inf, Surf.Snow.Melt, Sub.Soil.Drain, Surf.Snow.Refrz
+m_44_echo_16p_6s;3;nan;Surf.Snow.Melt
+m_44_echo_16p_6s;4;nan;Surf.Snow.Melt
+m_45_prms_18p_7s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.Int.Thru, Sub.SSFlow, Surf.Snow.Melt, Sub.Soil.Drain, Sub.GW.Loss.Deep, Surf.Over.SE, Surf.Snow.Stor
+m_45_prms_18p_7s;2;nan;Surf.ET, Sub.GWSW.Gain, Sub.SSFlow, Sub.Soil.Drain, Surf.Over.SE, Surf.Snow.Melt
+m_45_prms_18p_7s;3;nan;Surf.ET, Sub.Soil.Drain
+m_46_classic_12p_8s;1;Sub.GW.Store.Mult;Sub.GWSW.Gain, Surf.ET, Surf.Over.SE, Surf.Inf.Inf, Sub.Soil.Drain
+m_46_classic_12p_8s;2;nan;Surf.ET, Surf.Over.SE
+m_46_classic_12p_8s;3;nan;Surf.Over.SE

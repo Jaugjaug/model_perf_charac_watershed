@@ -1,0 +1,118 @@
+Abbrev;Full_name
+Chan.Atten;Channel.Attenuation
+Chan.Flow;Channel.Channel Flow
+Chan.Flow.Ephem;Channel.Channel Flow.Ephemeral\nstreamflow
+Chan.Flow.Interm;Channel.Channel Flow.Intermittent streamflow
+Chan.Flow.Peren;Channel.Channel Flow.Perennial flow
+Chan.Flow.Quick;Channel.Channel Flow.Quick flow
+Chan.Hypor;Channel.Hyporheic flow
+Chan.Int;Channel.Channel interception
+Chan.Store;Channel.Channel storage
+Chan.Store.Bank;Channel.Channel storage.Bank storage
+Chan.Store.Rip;Channel.Channel storage.Riparian aquifer storage
+Chan.Store.Rip.Unsat;Channel.Channel storage.Riparian aquifer storage.Riparian unsaturated storage
+Human.Sub.SSFlow.Tile;Human.Subsurface.Subsurface stormflow.Tile drain flow
+Sub.GW.BedInf;Subsurface.Groundwater.Infiltration into bedrock
+Sub.GW.BedInf.Macro;Subsurface.Groundwater.Infiltration into bedrock.Infiltration into bedrock via preferential flow paths
+Sub.GW.Disp;Subsurface.Groundwater.Displacement of\ngroundwater
+Sub.GW.Disp.Piston;Subsurface.Groundwater.Displacement of\ngroundwater.Pistonflow
+Sub.GW.Flow;Subsurface.Groundwater.Groundwater flow
+Sub.GW.Flow.Region;Subsurface.Groundwater.Groundwater flow.Regional groundwater flow
+Sub.GW.Flow.Rip;Subsurface.Groundwater.Groundwater flow.Riparian Groundwater Flow
+Sub.GW.Flow.Unsat;Subsurface.Groundwater.Groundwater flow.Lateral unsaturated bedrock flow
+Sub.GW.Loss.Bound;Subsurface.Groundwater.Groundwater loss.Water loss across surface watershed boundary
+Sub.GW.Loss.Deep;Subsurface.Groundwater.Groundwater loss.Water loss to deep groundwater
+Sub.GW.Ret;Subsurface.Groundwater.Return Flow
+Sub.GW.Ret.Exf;Subsurface.Groundwater.Return Flow.Exfiltration
+Sub.GW.Ret.Spr;Subsurface.Groundwater.Return Flow.Springflow
+Sub.GW.Store;Subsurface.Groundwater.Groundwater\nStorage
+Sub.GW.Store.BedHol;Subsurface.Groundwater.Groundwater\nStorage.Bedrock hollows
+Sub.GW.Store.Dynam;Subsurface.Groundwater.Groundwater\nStorage.Dynamic groundwater storage
+Sub.GW.Store.Fall;Subsurface.Groundwater.Groundwater\nStorage.Water table fall
+Sub.GW.Store.Matrix;Subsurface.Groundwater.Groundwater\nStorage.Bedrock fracture\nstorage
+Sub.GW.Store.Mult;Subsurface.Groundwater.Groundwater\nStorage.Multiple storage\nreservoirs producing\ndischarge
+Sub.GW.Store.Perch;Subsurface.Groundwater.Groundwater\nStorage.Perched water tables
+Sub.GW.Store.Region;Subsurface.Groundwater.Groundwater\nStorage.Regional Groundwater storage
+Sub.GW.Store.Rise;Subsurface.Groundwater.Groundwater\nStorage.Water table rise
+Sub.GW.Store.Stdis;Subsurface.Groundwater.Groundwater\n Storage.Storage-discharge relationship
+Sub.GW.Store.Total;Subsurface.Groundwater.Groundwater\nStorage.Total groundwater storage
+Sub.GW.Store.Unsat;Subsurface.Groundwater.Groundwater\nstorage.Unsaturated bedrock storage
+Sub.GW.Store.Wtable;Subsurface.Groundwater.Groundwater\nStorage.Water table
+Sub.GWSW.Conn;Subsurface.Stream-GW.Connectivity
+Sub.GWSW.Conn.Hill;Subsurface.Stream-GW.Connectivity.Connectivity between\nhillslopes and\nchannel
+Sub.GWSW.Conn.Lat;Subsurface.Stream-GW.Connectivity.Connectivity of lateral\npreferential flow pathways
+Sub.GWSW.Gain;Subsurface.Stream-GW.Gaining stream
+Sub.GWSW.Lose;Subsurface.Stream-GW.Losing stream
+Sub.Soil.Drain;Subsurface.Soils.Vertical drainage\nto groundwater
+Sub.Soil.Lat;Subsurface.Soils.Lateral unsaturated flow
+Sub.Soil.Macro;Subsurface.Soils.Vertical macrospore flow
+Sub.Soil.Macro.Unsat;Subsurface.Soils.Vertical macrospore flow.Unsaturated macrospore flow
+Sub.Soil.Matrix;Subsurface.Soils.Vertical matrix flow
+Sub.Soil.Matrix.Capil;Subsurface.Soils.Vertical matrix\nflow.Capillary Rise
+Sub.Soil.Mix;Subsurface.Soils.Mixing
+Sub.Soil.Store;Subsurface.Soils.Soil water storage
+Sub.Soil.Store.Layer;Subsurface.Soils.Soil water storage.Soil stratification
+Sub.Soil.Store.Organ;Subsurface.Soils.Soil water storage.Organic Layer
+Sub.Soil.Store.Satur;Subsurface.Soils.Soil water storage.Soil saturation
+Sub.Soil.Store.Tens;Subsurface.Soils.Soil water storage.Tension storage
+Sub.Soil.Vapor;Subsurface.Soils.Vapor diffusion
+Sub.SSFlow;Subsurface.Subsurface\nstormflow
+Sub.SSFlow.Conv;Subsurface.Subsurface stormflow.Topographic convergence
+Sub.SSFlow.Macro;Subsurface.Subsurface stormflow.Lateral macrospore flow
+Sub.SSFlow.Macro.Bedrk;Subsurface.Subsurface stormflow.Lateral macrospore flow.Lateral macrospore flow at soil-bedrock interface
+Sub.SSFlow.Macro.Horiz;Subsurface.Subsurface stormflow.Lateral macrospore flow.Lateral macrospore flow at soil horizons
+Sub.SSFlow.Matrix;Subsurface.Subsurface stormflow.Lateral matrix flow
+Sub.SSFlow.Matrix.Bedrk;Subsurface.Subsurface stormflow.Lateral matrix flow.Lateral matrix flow at soil-bedrock interface
+Sub.SSFlow.Matrix.Horiz;Subsurface.Subsurface stormflow.Lateral matrix flow.Lateral matrix flow at soil horizons
+Sub.SSFlow.Organ;Subsurface.Subsurface stormflow.Organic layer interflow
+Sub.SSFlow.Rip;Subsurface.Subsurface stormflow.Subsurface stormflow from riparian zone
+Sub.SSFlow.VSAsub;Subsurface.Subsurface stormflow.Variable source area - subsurface stormflow
+Surf.ET;Surface.Evapotranspiration
+Surf.ET.Evap;Surface.Evapotranspiration.Evaporation
+Surf.ET.Evap.Canopy;Surface.Evapotranspiration.Evaporation.Canopy evaporation
+Surf.ET.Evap.Soil;Surface.Evapotranspiration.Evaporation.Soil surface\nevaporation
+Surf.ET.Transp;Surface.Evapotranspiration.Transpiration
+Surf.ET.Transp.Rip;Surface.Evapotranspiration.Transpiration.Riparian transpiration
+Surf.Frozen.FrzThw;Surface.Frozen Ground.Seasonal soil freeze/thaw
+Surf.Frozen.Inf;Surface.Frozen Ground.Infiltration into frozen ground
+Surf.Glac.Melt;Surface.Glacier.Glacier melt
+Surf.Glac.Melt.Ice;Surface.Glacier.Glacier melt.Glacier icemelt
+Surf.Glac.Melt.Firn;Surface.Glacier.Glacier melt.Firnmelt
+Surf.Glac.Stor;Surface.Glacier.Glacier storage
+Surf.Inf.Inf;Surface.Infiltration.Infiltration
+Surf.Inf.Inf.Reinf;Surface.Infiltration.Infiltration.Reinfiltration
+Surf.Inf.Soil;Surface.Infiltration.Soil surface processes
+Surf.Inf.Soil.Compac;Surface.Infiltration.Soil surface processes.Compaction
+Surf.Inf.Soil.Hyphob;Surface.Infiltration.Soil surface processes.Hydrophobicity
+Surf.Int.Int;Surface.Interception.Interception
+Surf.Int.Int.Canopy;Surface.Interception.Interception.Canopy interception
+Surf.Int.Int.Forest;Surface.Interception.Interception.Forest floor interception
+Surf.Int.Stem;Surface.Interception.Stemflow
+Surf.Int.Thru;Surface.Interception.Throughfall
+Surf.Over;Surface.Overland Flow
+Surf.Over.IE;Surface.Overland Flow.IE flow
+Surf.Over.IE.Frozen;Surface.Overland Flow.IE flow.IE flow from frozen ground
+Surf.Over.IE.Imp;Surface.Overland Flow.IE flow.IE flow from\nimpermeable areas
+Surf.Over.IE.Part;Surface.Overland Flow.IE flow.Partial area IE flow
+Surf.Over.Rill;Surface.Overland Flow.Rill flow
+Surf.Over.SE;Surface.Overland Flow.Saturation excess flow
+Surf.Over.SE.Rip;Surface.Overland Flow.Saturation excess flow.SE flow from riparian zone
+Surf.Over.SE.Satexp;Surface.Overland Flow.Saturation excess flow.Expansion of saturated areas
+Surf.Snow.Age.Albedo;Surface.Snow.Snowpack aging.Change in albedo
+Surf.Snow.Age.Compac;Surface.Snow.Snowpack aging.Compaction
+Surf.Snow.Age.Layer;Surface.Snow.Snowpack aging.Formation of layers/lenses
+Surf.Snow.Canopy;Surface.Snow.Canopy snow interception
+Surf.Snow.Drift;Surface.Snow.Snow drifting
+Surf.Snow.Melt;Surface.Snow.Snowmelt
+Surf.Snow.Melt.Basal;Surface.Snow.Snowmelt.Basal flow
+Surf.Snow.Melt.Macro;Surface.Snow.Snowmelt.Macropore flow within snowpack
+Surf.Snow.Melt.Ripen;Surface.Snow.Snowmelt.Ripening
+Surf.Snow.Refrz;Surface.Snow.Refreezing
+Surf.Snow.Stor;Surface.Snow.Snow storage
+Surf.Snow.Stor.Season;Surface.Snow.Snow storage.Seasonal snow storage
+Surf.Snow.Subl;Surface.Snow.Sublimation
+Surf.Snow.Subl.Blow;Surface.Snow.Sublimation.Sublimation during blowing snow events
+Surf.Snow.Subl.Canopy;Surface.Snow.Sublimation.Canopy sublimation
+Surf.Water;Surface.Surface water\nstorage
+Surf.Water.Depr;Surface.Surface water storage.Depression storage
+Surf.Water.Lake;Surface.Surface water.Lake storage

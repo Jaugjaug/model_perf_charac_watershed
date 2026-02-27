@@ -1,0 +1,46 @@
+Abbrev;Full_name;Category
+area_gages2;Area (GAGESII estimate) [km2];Topography
+area_geospa_fabric;Area (geospatial fabric estimate) [km2];Topography
+elev_mean;Mean elevation [m a.s.l.];Topography
+slope_mean;Mean slope [m/km];Topography
+low_prec_dur;Duration of dry periods [days];Climate
+low_prec_freq;Frequency of dry days [days/yr];Climate
+high_prec_dur;Duration of high precipitation [days];Climate
+high_prec_freq;Frequency of high precipitation days [days/yr];Climate
+aridity;Aridity [-];Climate
+frac_snow;Fraction of precipitation falling as snow [-];Climate
+p_seasonality;Seasonality and timing of precipitation [-];Climate
+pet_mean;Mean daily PET [mm/day];Climate
+p_mean;Mean daily precipitation [mm/day];Climate
+q_mean;Mean daily flow [mm/day];Hydrology
+hfd_mean;Half-flow date [day];Hydrology
+zero_q_freq;Frequency of days with Q = 0 [%];Hydrology
+low_q_dur;Duration of low-flow [days];Hydrology
+low_q_freq;Frequency of low-flow days [days/yr];Hydrology
+high_q_dur;Duration of high-flow [days];Hydrology
+high_q_freq;Frequency of high-flow [days];Hydrology
+q95;95% flow quantile (high flow) [mm/day];Hydrology
+q5;5% flow quantile (low flow) [mm/day];Hydrology
+stream_elas;Streamflow precipitation elasticity [-];Hydrology
+baseflow_index;Baseflow index [-];Hydrology
+slope_fdc;Slope of the flow duration curve [-];Hydrology
+runoff_ratio;Runoff ratio [mm/day];Hydrology
+other_frac;Fraction of soil_depth_statsgo marked as “other” [%];Soil
+organic_frac;Fraction of soil_depth_statsgo marked as organic material [%];Soil
+water_frac;Fraction of the top 1.5 m marked as water [%];Soil
+clay_frac;Clay fraction [%];Soil
+silt_frac;Silt fraction [%];Soil
+sand_frac;Sand fraction [%];Soil
+max_water_content;Maximum water content [m];Soil
+soil_conductivity;Saturated hydraulic conductivity [cm/h];Soil
+soil_porosity;Volumetric porosity [-];Soil
+soil_depth_statsgo;Soil depth [m];Soil
+soil_depth_pelletier;Depth to bedrock [m];Soil
+root_depth_99;Root depth (99%) [-];Land Cover
+root_depth_50;Root depth (50%) [-];Land Cover
+dom_land_cover_frac;Fraction of the catchment area associated with the dominant land cover [-];Land Cover
+gvf_diff;Difference between the maximum and minimum monthly mean of the green vegetation fraction;Land Cover
+gvf_max;Maximum monthly mean of the green vegetation fraction [-];Land Cover
+lai_diff;Difference between the maximum and minimum monthly mean of the leaf area index [-];Land Cover
+lai_max;Maximum monthly mean of the leaf area index [-];Land Cover
+frac_forest;Forest fraction [-];Land Cover
