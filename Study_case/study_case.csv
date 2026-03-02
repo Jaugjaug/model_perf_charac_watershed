@@ -1,0 +1,7 @@
+﻿ID_try,tree_type,ID_type,Processes,Comment
+1,model,m_37_hbv_15p_5s,"Sub.GW.Store.Mult,Sub.GWSW.Gain,Sub.Soil.Matrix.Capil,Surf.ET.Evap.Soil,Surf.Inf.Inf,Sub.SSFlow,Surf.Snow.Melt,Sub.Soil.Drain,Surf.Snow.Stor,Surf.Snow.Refrz,Chan.Flow,Sub.Soil.Drain,Surf.Snow.Melt",
+1,watershed,3574500,"Chan.Store.Rip.Unsat,Chan.Store,Chan.Store.Rip",WTS_nb_1
+1,watershed,3574500,"Surf.Water,Sub.GW.Store,Sub.Soil.Store,Sub.Soil.Store.Satur,Surf.Water.Depr,Sub.GWSW.Gain,Sub.GW.Loss.Deep,Surf.ET.Transp.Rip,Surf.ET,Surf.Over,Chan.Flow,Surf.Over.SE,Sub.Soil.Drain,Sub.SSFlow",WTS_nb_66
+2,model,m_07_gr4j_4p_2s,"Sub.GW.Store.Mult,Sub.GWSW.Gain,Surf.ET.Evap.Soil,Sub.Soil.Drain,Surf.Over.SE,Chan.Flow,Sub.Soil.Drain,Chan.Flow",
+2,watershed,2053200,"Sub.GW.Store.Wtable,Surf.Water.Depr,Sub.GW.Store.Perch,Sub.GW.Store,Sub.Soil.Store.Layer,Surf.Over.SE,Sub.SSFlow,Sub.SSFlow.Matrix,Surf.ET,Chan.Flow",WTS_nb_31
+2,watershed,2053200,"Surf.Over.SE.Satexp,Surf.Over.SE,Chan.Flow.Quick",WTS_nb_45
